@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="bulma/css/bulma.css">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 500px;
+            height: fit-content;
+            display: flex;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+    
+        }
+
+        #add {
+            width: fit-content;
+            height: 500px;
+            padding-right: 25px;
+            margin-right: 25px;
+            border-right: 2px solid black;
+        }
+
+        #search {
+            width: fit-content;
+            height: 200px;
+        }
+
+        .search-label {
+            font-weight: bold;
+        }
+
+        .details {
+            font-weight: normal;
+            font-size: 1.5em;
+        }
+
+        .updated-details {
+            font-weight: normal;
+            font-size: 1.2em;
+        }
+        .colorbutton {
+        height: 30px;
+        width: 30px;
+        outline: none;
+        margin: 5px;
+        }
+        .button0 {background-color: #ce0707;} /* Green */
+        .button1 {background-color: #e7890d;} /* Blue */
+        .button2 {background-color: #e8f531;} /* Green */
+        .button3 {background-color: #4CAF50;} /* Green */
+        .button4 {background-color: #008CBA;} /* Blue */    
+        .button5 {background-color: #190ae9;} /* Blue */
+        .button6 {background-color: #8e0be6;} /* Green */
+        .button7 {background-color: #f71bd9;} /* Blue */
+        .button8 {background-color: #e9dede;} /* Green */
+        .button9 {background-color: #000000;} /* Blue */
+        
+        
+
+    </style>
+</head>
+
+<body>
+           <div id="container">
+            
+            <br>
+            <div ><p id="availability" >Website</p>
+            <div id="displayifrecord">
+               
+                    <p>Please enter your selected password:</p>
+                    <input class="input is-primary is-rounded is-small" type="text" name="password" id="password" placeholder="Password">
+                    <br>
+                    <div id="container1">
+                    </div> 
+                    <div id="saved_entries"></div>
+                    <div id="color_input" style="display: none;">
+                       
+                        <p>Click the color boxes to create a password:</p>
+                        <button id="#ce0707" class=" button is-rounded is-small colorbutton button0 " value=0></button>
+                        <button id="#e7890d" class="button is-rounded is-small colorbutton button1" value=1></button>
+                        <button id="#e8f531" class="button is-rounded is-small colorbutton button2"value=2></button>
+                        <button id="#4CAF50" class="button is-rounded is-small colorbutton button3"value=3></button>
+                        <button id="#008CBA"class="button is-rounded is-small colorbutton button4" value=4></button>
+                        <button id="#190ae9"class="button is-rounded is-small colorbutton button5"value=5></button>
+                        <button id="#8e0be6"class="button is-rounded is-small colorbutton button6"value=6></button>
+                        <button id="#f71bd9"class="button is-rounded is-small colorbutton button7"value=7></button>
+                        <button id="#e9dede"class="button is-rounded is-small colorbutton button8"value=8></button>
+                        <button id="#000000" class="button is-rounded is-small colorbutton button9"value=9></button>
+                        <div id="color_pass">
+                            <span>Selected: </span>
+                            <button id="s0" class="colorbutton "disabled>1</button>
+                            <button id="s1" class="colorbutton "disabled>2</button>
+                            <button id="s2" class="colorbutton "disabled>3</button>
+                            <button id="s3" class="colorbutton "disabled>4</button>
+                            <button id="s4" class="colorbutton "disabled>5</button>
+                            <button id="s5" class="colorbutton "disabled>6</button>
+                            <button class="button is-rounded is-small"id="next_color"style="display: none;" >Next -></button>
+
+
+                    </div>
+                   
+                    </div>
+                    <br>
+                    
+                     <button id= "submitform" class="button is-primary" style="left: 45%;">Submit</button>
+            
+            <p id="warningInput"></p> 
+            <div id="result"></div>
+            </div>
+                              
+            
+            </div>
+           
+
+
+
+            <div id="create_pass" style="display:none;"> 
+
+                <p>Passord combination strength:</p>
+                <progress  id ="progressbar" class="progress is-link" value="0" max="100">0%</progress>
+                <p id="procent">0%</p>
+                <p>Add a username for this website:</p>
+                <input id="username">
+                <p>Add a password for this website:</p>
+                
+            <input class="input" id="sample_pass">
+            <p id="strength"></p>
+            <div id="multilayer">
+                <div id="lockedin_answers"></div>
+                <div id="container2"></div>
+
+                <div class="select is-small">
+               
+                </div>
+                <p id="warning"></p>
+                <p>AND/OR</p>
+                <div id="lockedcolors">
+
+                </div>
+                <div class="color_selection">
+                    <p>Click the color boxes to create a password:</p>
+                    <button id="red" class="colorbutton button0" value=0></button>
+                    <button id="orange" class="colorbutton button1" value=1></button>
+                    <button id="yellow" class="colorbutton button2"value=2></button>
+                    <button id="green" class="colorbutton button3"value=3></button>
+                    <button id="lblue"class="colorbutton button4" value=4></button>
+                    <button id="dblue"class="colorbutton button5"value=5></button>
+                    <button id="purple"class="colorbutton button6"value=6></button>
+                    <button id="pink"class="colorbutton button7"value=7></button>
+                    <button id="white"class="colorbutton button8"value=8></button>
+                    <button id="black" class="colorbutton button9"value=9></button>
+                    <div id="colorpalette">
+                        
+                        <button id="b0" class="colorbutton "disabled>1</button>
+                        <button id="b1" class="colorbutton "disabled>2</button>
+                        <button id="b2" class="colorbutton "disabled>3</button>
+                        <button id="b3" class="colorbutton "disabled>4</button>
+                        <button id="b4" class="colorbutton "disabled>5</button>
+                        <button id="b5" class="colorbutton "disabled>6</button>
+
+                    </div>
+                    <button id="add_color">Add password</button>
+                </div>
+            </div>
+            </div>
+           <button class="button is-primary" id ="submit_all" style="display:none;">Submit password combination</button>
+        </div>
+    
+    
+    <script src="./popup-script.js"></script>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="zxcvbn.js"></script>
+</body>
+
+</html>
